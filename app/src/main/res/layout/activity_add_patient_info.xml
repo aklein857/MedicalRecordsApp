@@ -1,9 +1,14 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     tools:context="com.adamklein.android.medicalrecordsapp.AddPatientInfoActivity">
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <EditText
         android:layout_width="match_parent"
@@ -36,6 +41,98 @@
 
         />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_email"
+
+        android:hint="Email Address"
+        android:layout_below="@id/editText_last_name"
+
+    />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/editText_social_security"
+    android:hint="Social security # no spaces or dashes"
+    android:layout_below="@id/editText_email"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone # no spaces or dashes"
+        android:id="@+id/editText_phone_number"
+        android:layout_below="@id/editText_social_security"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="House #"
+        android:id="@+id/editText_house_number"
+        android:layout_below="@id/editText_phone_number"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_street"
+
+        android:hint="Street Name"
+        android:layout_below="@id/editText_house_number"
+
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_city"
+
+        android:hint="City"
+        android:layout_below="@id/editText_street"
+
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_state"
+
+        android:hint="State"
+        android:layout_below="@id/editText_city"
+
+    />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_zip"
+        android:hint="Zip Code"
+        android:layout_below="@id/editText_state"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_age"
+        android:layout_below="@id/editText_zip"
+        android:hint="Age"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_gender"
+
+        android:hint="Gender"
+        android:layout_below="@id/editText_age"
+
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_ethnicity"
+
+        android:hint="Ethnicity"
+        android:layout_below="@id/editText_gender"
+
+    />
+
 
 
     <Button
@@ -44,10 +141,9 @@
         android:id="@+id/button_submit_info"
 
         android:text="@string/submit_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="128dp" />
+        android:layout_below="@id/editText_ethnicity"
+        android:layout_centerHorizontal="true" />
 
+        </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>

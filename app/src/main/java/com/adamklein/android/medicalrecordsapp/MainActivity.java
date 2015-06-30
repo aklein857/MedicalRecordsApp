@@ -3,14 +3,13 @@ package com.adamklein.android.medicalrecordsapp;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,10 +48,19 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()){
 
-                    buffer.append("ID :" + res.getString(0)+"\n");
-                    buffer.append("First Name :" + res.getString(1)+"\n");
-                    buffer.append("Middle Name :" + res.getString(2)+"\n");
-                    buffer.append("Last Name :" + res.getString(3)+"\n\n");
+                    buffer.append("ID:  " + res.getString(0)+"\n");
+                    buffer.append("First Name:  " + res.getString(1)+"\n");
+                    buffer.append("Middle Name:  " + res.getString(2)+"\n");
+                    buffer.append("Last Name:  " + res.getString(3)+"\n");
+                    buffer.append("Email:  " + res.getString(4)+"\n");
+                    buffer.append("Social Security:  " + res.getString(5)+"\n");
+                    buffer.append("Phone Number:  " + res.getString(6)+"\n");
+                    buffer.append("Address: " + res.getString(7) + " " + res.getString(8) + "\n"
+                            + "                 " + res.getString(9) + ", " + res.getString(10)
+                            + " " + res.getString(11) + "\n");
+                    buffer.append("Age:  " + res.getString(12)+"\n");
+                    buffer.append("Gender:  " + res.getString(13)+"\n");
+                    buffer.append("Ethnicity:  " + res.getString(14)+"\n\n");
                 }
 
                 showMessage("Data", buffer.toString());

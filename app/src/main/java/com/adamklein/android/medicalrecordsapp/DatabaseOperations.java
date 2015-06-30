@@ -22,10 +22,36 @@ public class DatabaseOperations extends SQLiteOpenHelper implements BaseColumns 
     public static final String FIRST_NAME = "first_name";
     public static final String MIDDLE_NAME = "middle_name";
     public static final String LAST_NAME = "last_name";
+    public static final String SOCIAL_SECURITY = "social_security";
+    public static final String PHONE_NUMBER = "phone_number";
+    public static final String EMAIL = "email_address";
+    public static final String HOUSE_NUMBER = "house_number";
+    public static final String STREET = "street";
+    public static final String CITY = "city";
+    public static final String STATE = "state";
+    public static final String ZIP = "zip_code";
+    public static final String AGE = "age";
+    public static final String GENDER = "gender";
+    public static final String ETHNICITY = "ethnicity";
 
 
     public final String CREATE_QUERY = "CREATE TABLE " + TABLE_NAME +
-            " (_id INTEGER PRIMARY KEY AUTOINCREMENT, " + FIRST_NAME + " TEXT, " + MIDDLE_NAME + " TEXT, " + LAST_NAME + " TEXT);";
+            " (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + FIRST_NAME + " TEXT, "
+            + MIDDLE_NAME + " TEXT, "
+            + LAST_NAME + " TEXT, "
+            + EMAIL + " TEXT, "
+            + SOCIAL_SECURITY + " INTEGER, "
+            + PHONE_NUMBER + " INTEGER, "
+            + HOUSE_NUMBER + " INTEGER, "
+            + STREET + " TEXT, "
+            + CITY + " TEXT, "
+            + STATE + " TEXT, "
+            + ZIP + " INTEGER, "
+            + AGE + " INTEGER, "
+            + GENDER + " TEXT, "
+            + ETHNICITY + " TEXT);";
+
 
     //used for logcat purposes
     private static final String TAG = "DatabaseOperations";
@@ -49,11 +75,17 @@ public class DatabaseOperations extends SQLiteOpenHelper implements BaseColumns 
     @Override
     public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2){
 
+        arg0.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME );
+        onCreate(arg0);
+        Log.d(TAG, "Table (register_info_table) dropped and recreated");
+
     }
 
     //custom method to put information into the database
     public boolean putInformation(DatabaseOperations dbOps, String firstName, String middleName,
-                               String lastName){
+                               String lastName, String email, long socialSecurity, long phoneNumber, int houseNumber,
+                                  String street, String city, String state, int zip, int age,
+                                  String gender, String ethnicity){
 
         // SQLiteDatabase object instantiated to write data into database
         SQLiteDatabase sq = dbOps.getWritableDatabase();
@@ -62,6 +94,17 @@ public class DatabaseOperations extends SQLiteOpenHelper implements BaseColumns 
         cv.put(FIRST_NAME, firstName);
         cv.put(MIDDLE_NAME, middleName);
         cv.put(LAST_NAME, lastName);
+        cv.put(EMAIL, email);
+        cv.put(SOCIAL_SECURITY, socialSecurity);
+        cv.put(PHONE_NUMBER, phoneNumber);
+        cv.put(HOUSE_NUMBER, houseNumber);
+        cv.put(STREET, street);
+        cv.put(CITY, city);
+        cv.put(STATE, state);
+        cv.put(ZIP, zip);
+        cv.put(AGE, age);
+        cv.put(GENDER, gender);
+        cv.put(ETHNICITY, ethnicity);
 
 
         //method returns a long value but it is not necessary to store the value
