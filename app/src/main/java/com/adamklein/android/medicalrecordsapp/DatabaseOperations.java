@@ -127,5 +127,35 @@ public class DatabaseOperations extends SQLiteOpenHelper implements BaseColumns 
         return res;
     }
 
+    public boolean updateData(String id, String firstName, String middleName,
+                              String lastName, String email, long socialSecurity, long phoneNumber, int houseNumber,
+                              String street, String city, String state, int zip, int age,
+                              String gender, String ethnicity){
+
+        SQLiteDatabase sq = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+
+        cv.put(_ID, id);
+        cv.put(FIRST_NAME, firstName);
+        cv.put(MIDDLE_NAME, middleName);
+        cv.put(LAST_NAME, lastName);
+        cv.put(EMAIL, email);
+        cv.put(SOCIAL_SECURITY, socialSecurity);
+        cv.put(PHONE_NUMBER, phoneNumber);
+        cv.put(HOUSE_NUMBER, houseNumber);
+        cv.put(STREET, street);
+        cv.put(CITY, city);
+        cv.put(STATE, state);
+        cv.put(ZIP, zip);
+        cv.put(AGE, age);
+        cv.put(GENDER, gender);
+        cv.put(ETHNICITY, ethnicity);
+
+        sq.update(TABLE_NAME, cv, "_id = ?", new String[]{id});
+
+        return true;
+
+    }
 
 }

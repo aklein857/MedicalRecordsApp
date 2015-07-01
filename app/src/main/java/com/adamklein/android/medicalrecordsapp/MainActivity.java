@@ -9,15 +9,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseOperations myDB;
+    public static DatabaseOperations myDB;
 
     private Button mAddPatientInfo;
     private Button mShowPatientInfo;
-
+    private Button mUpdatePatientInfo;
+    private Button mDeletePatientInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,28 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 showMessage("Data", buffer.toString());
+
+            }
+        });
+
+        mUpdatePatientInfo = (Button)findViewById(R.id.update_info_button);
+        mUpdatePatientInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, UpdateInformationActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+        mDeletePatientInfo = (Button)findViewById(R.id.delete_info_button);
+        mDeletePatientInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(MainActivity.this, R.string.app_in_progress_toast,
+                        Toast.LENGTH_SHORT ).show();
 
             }
         });

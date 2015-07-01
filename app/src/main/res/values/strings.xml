@@ -1,12 +1,20 @@
 <resources>
     <string name="app_name">MedicalRecordsApp</string>
 
-    <string name="add_info_button">Add Patient Info</string>
-    <string name="show_info_button">Show Patient Info</string>
+    <string name="add_info_button">Add Patient Information</string>
+    <string name="show_info_button">Show Patient Information</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_patient_info">AddPatientInfoActivity</string>
 
     <string name="submit_button">Submit Info</string>
     <string name="app_in_progress_toast">Application in progress...thank you for your patience!</string>
     <string name="info_submitted_toast">The patient\'s information has been added.</string>
+    <string name="update_patient_info">Update Patient Information</string>
+    <string name="delete_patient_info">Delete Patient Information</string>
+    <string name="title_activity_update_information">UpdateInformationActivity</string>
+    <string name="button_submit_updated_info">Submit Updated Information</string>
+    <string name="data_updated_toast">Patient Information Updated</string>
+    <string name="data_not_updated_toast">Patient Information Not Updated</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

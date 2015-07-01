@@ -24,6 +24,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.adamklein.android.medicalrecordsapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".UpdateInformationActivity"
+            android:label="@string/title_activity_update_information"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adamklein.android.medicalrecordsapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -9,15 +9,28 @@
     <Button
         android:id="@+id/add_info_button"
         android:text="@string/add_info_button"
-        android:layout_width="wrap_content"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:padding="20dp"/>
 
     <Button
         android:id="@+id/show_info_button"
         android:text="@string/show_info_button"
-        android:layout_width="wrap_content"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
+        android:padding="20dp"/>
+
+    <Button
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_info_button"
+        android:text="@string/update_patient_info"
+        android:padding="20dp"/>
+    <Button
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_info_button"
+        android:text="@string/delete_patient_info"
         android:padding="20dp"/>
 
 </LinearLayout>

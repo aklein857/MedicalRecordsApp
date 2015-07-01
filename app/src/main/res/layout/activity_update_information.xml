@@ -1,0 +1,164 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_ID"
+        android:hint="Enter ID of the record to be updated"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_first_name_update"
+
+        android:hint="First Name"
+
+        android:layout_below="@id/editText_ID"
+
+        />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_middle_name_update"
+
+        android:hint="Middle Name"
+
+        android:layout_below="@id/editText_first_name_update"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_last_name_update"
+
+        android:hint="Last Name"
+        android:layout_below="@id/editText_middle_name_update"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_email_update"
+
+        android:hint="Email Address"
+        android:layout_below="@id/editText_last_name_update"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_social_security_update"
+        android:hint="Social security # no spaces or dashes"
+        android:layout_below="@id/editText_email_update"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone # no spaces or dashes"
+        android:id="@+id/editText_phone_number_update"
+        android:layout_below="@id/editText_social_security_update"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="House #"
+        android:id="@+id/editText_house_number_update"
+        android:layout_below="@id/editText_phone_number_update"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_street_update"
+
+        android:hint="Street Name"
+        android:layout_below="@id/editText_house_number_update"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_city_update"
+
+        android:hint="City"
+        android:layout_below="@id/editText_street_update"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_state_update"
+
+        android:hint="State"
+        android:layout_below="@id/editText_city_update"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_zip_update"
+        android:hint="Zip Code"
+        android:layout_below="@id/editText_state_update"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_age_update"
+        android:layout_below="@id/editText_zip_update"
+        android:hint="Age"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_gender_update"
+
+        android:hint="Gender"
+        android:layout_below="@id/editText_age_update"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_ethnicity_update"
+
+        android:hint="Ethnicity"
+        android:layout_below="@id/editText_gender_update"
+
+        />
+
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_submit_updated_info"
+
+        android:text="@string/button_submit_updated_info"
+        android:layout_below="@id/editText_ethnicity_update"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>
+
+</ScrollView>
