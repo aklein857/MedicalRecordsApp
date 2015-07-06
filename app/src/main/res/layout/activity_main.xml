@@ -33,4 +33,5 @@
         android:text="@string/delete_patient_info"
         android:padding="20dp"/>
 
+
 </LinearLayout>

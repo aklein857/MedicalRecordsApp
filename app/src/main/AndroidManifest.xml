@@ -32,6 +32,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.adamklein.android.medicalrecordsapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".DeletePatientInfo"
+            android:label="@string/title_activity_delete_patient_info"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adamklein.android.medicalrecordsapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

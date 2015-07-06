@@ -17,4 +17,5 @@
     <string name="data_not_updated_toast">Patient Information Not Updated</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_delete_patient_info">DeletePatientInfo</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -21,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
     private Button mUpdatePatientInfo;
     private Button mDeletePatientInfo;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         myDB = new DatabaseOperations(this);
+
 
         mAddPatientInfo = (Button)findViewById(R.id.add_info_button);
         mAddPatientInfo.setOnClickListener(new View.OnClickListener() {
@@ -86,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(MainActivity.this, R.string.app_in_progress_toast,
-                        Toast.LENGTH_SHORT ).show();
-
+                Intent i = new Intent(MainActivity.this, DeletePatientInfo.class);
+                startActivity(i);
+                
             }
         });
     }

@@ -158,4 +158,12 @@ public class DatabaseOperations extends SQLiteOpenHelper implements BaseColumns 
 
     }
 
+    public int deleteData(String id){
+
+        SQLiteDatabase sq = this.getWritableDatabase();
+        return sq.delete(TABLE_NAME, "_id = ?", new String[]{id});
+
+
+    }
+
 }
