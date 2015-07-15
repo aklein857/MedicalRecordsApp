@@ -9,8 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Cursor res = myDB.getAllData();
                 if (res.getCount() == 0){
-                    showMessage("Error", "No data was found");
+                    showMessage("DataBase Empty", "No data was found");
                     return;
                 }
 
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MainActivity.this, DeletePatientInfo.class);
                 startActivity(i);
-                
+
             }
         });
     }
